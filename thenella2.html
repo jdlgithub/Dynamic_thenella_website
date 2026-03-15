@@ -53,11 +53,11 @@
 
     <section class="biography" id="biography">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2 data-lang-en="Her Story" data-lang-fr="Son Histoire">Her Story</h2>
             </div>
             
-            <div class="bio-content">
+            <div class="bio-content reveal">
                 <div class="bio-img">
                     <img src="images/OIP.webp" alt="THENELLA">
                 </div>
@@ -82,11 +82,11 @@
     <!-- Achievements Section -->
     <section class="achievements" id="achievements">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2 data-lang-en="Achievements & Awards" data-lang-fr="Réalisations & Récompenses">Achievements & Awards</h2>
             </div>
             
-            <div class="achievements-grid">
+            <div class="achievements-grid reveal">
                 <div class="achievement-card">
                     <div class="achievement-icon">
                         <i class="fas fa-trophy"></i>
@@ -125,11 +125,11 @@
     <!-- Music Section -->
     <section class="music" id="music">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2 data-lang-en="Discography" data-lang-fr="Discographie">Discography</h2>
             </div>
             
-            <div class="music-grid">
+            <div class="music-grid reveal">
                 <div class="music-card">
                     <div class="music-img">
                         <img src="images/592x592bb.webp" alt="Cœur Nouveau Album">
@@ -169,11 +169,11 @@
     <!-- Media Section -->
     <section class="media" id="media">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2 data-lang-en="Gallery" data-lang-fr="Galerie">Gallery</h2>
             </div>
             
-            <div class="media-slider">
+            <div class="media-slider reveal" id="media-slider">
                 <div class="slider-container" id="slider-container">
                     <div class="slide">
                         <img src="images/OIP.webp" alt="THENELLA Ministry">
@@ -205,9 +205,10 @@
                 </div>
                 
                 <div class="slider-controls">
-                    <button class="slider-btn" id="prev-btn"><i class="fas fa-chevron-left"></i></button>
-                    <button class="slider-btn" id="next-btn"><i class="fas fa-chevron-right"></i></button>
+                    <button class="slider-btn" id="prev-btn" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-btn" id="next-btn" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
                 </div>
+                <div id="slider-dots" class="slider-dots" aria-hidden="true"></div>
             </div>
         </div>
     </section>
@@ -215,11 +216,11 @@
     <!-- Accounts Section -->
     <section class="accounts" id="accounts">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2 data-lang-en="Social Media & Music" data-lang-fr="Réseaux Sociaux & Musique">Social Media & Music</h2>
             </div>
             
-            <div class="accounts-grid">
+            <div class="accounts-grid reveal">
                 <div class="account-card youtube">
                     <div class="account-icon">
                         <i class="fab fa-youtube"></i>
@@ -278,25 +279,27 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2 data-lang-en="Contact & Booking" data-lang-fr="Contact & Réservation">Contact & Booking</h2>
             </div>
             
-            <div class="contact-form">
+            <div class="contact-form reveal">
                 <form id="booking-form">
                     <div class="form-group">
                         <label for="name" data-lang-en="Full Name" data-lang-fr="Nom Complet">Full Name</label>
-                        <input type="text" id="name" required>
+                        <input type="text" id="name" required autocomplete="name">
+                        <span class="field-error" id="name-error" aria-live="polite"></span>
                     </div>
                     
                     <div class="form-group">
                         <label for="email" data-lang-en="Email Address" data-lang-fr="Adresse Email">Email Address</label>
-                        <input type="email" id="email" required>
+                        <input type="email" id="email" required autocomplete="email">
+                        <span class="field-error" id="email-error" aria-live="polite"></span>
                     </div>
                     
                     <div class="form-group">
                         <label for="phone" data-lang-en="Phone Number" data-lang-fr="Numéro de Téléphone">Phone Number</label>
-                        <input type="tel" id="phone">
+                        <input type="tel" id="phone" autocomplete="tel">
                     </div>
                     
                     <div class="form-group">
@@ -362,6 +365,8 @@
             </div>
         </div>
     </footer>
+
+    <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
 
     <script src="js/main.js"></script>
 </body>
