@@ -518,6 +518,9 @@ header.scrolled {
     color: var(--primary);
     cursor: pointer;
     transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .slider-btn:hover {
@@ -741,6 +744,12 @@ header.scrolled {
     z-index: 900;
 }
 
+.back-to-top i {
+    display: inline-block;
+    line-height: 1;
+    color: var(--white);
+}
+
 .back-to-top.visible {
     opacity: 1;
     visibility: visible;
@@ -822,6 +831,7 @@ footer {
     color: var(--white);
     text-decoration: none;
     transition: var(--transition);
+    font-size: 1rem;
 }
 
 .social-icons a:hover {
@@ -921,6 +931,9 @@ footer {
         width: 40px;
         height: 40px;
         font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .slide img {
